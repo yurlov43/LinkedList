@@ -51,12 +51,12 @@ class LinkedList:
                     self.tail = None
                 elif node_current is self.head:
                     self.head = node_current.next
-                    node_previous = self.head
                 elif node_current is self.tail:
                     self.tail = node_previous
-                    node_current = self.tail
+                    node_current = node_previous
                 else:
                     node_previous.next = node_current.next
+                    node_current = node_previous
                 if all is False:
                     return
             node_previous = node_current
